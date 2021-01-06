@@ -71,6 +71,8 @@ var (
 			"-mcpu=kryo",
 		},
 		"kryo385": []string{
+			// Use cortex-a75 because kryo385 is not supported in GCC/clang.
+			// kryo385 does not support dot product feature.
 			"-mcpu=cortex-a75+nodotprod",
 		},
 		"kryo585": []string{

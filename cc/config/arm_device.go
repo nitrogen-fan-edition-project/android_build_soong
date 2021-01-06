@@ -153,6 +153,7 @@ var (
 		},
 		"kryo385": []string{
 			"-mcpu=cortex-a55",
+			"-mfpu=neon-fp-armv8",
 			// Fake an ARM compiler flag as these processors support LPAE which GCC/clang
 			// don't advertise.
 			// TODO This is a hack and we need to add it for each processor that supports LPAE until some
@@ -252,7 +253,7 @@ var (
 		"cortex-a76":     "${config.ArmClangCortexA55Cflags}",
 		"krait":          "${config.ArmClangKraitCflags}",
 		"kryo":           "${config.ArmClangKryoCflags}",
-		"kryo385":        "${config.ArmClangCortexA55Cflags}",
+		"kryo385":        "${config.ArmClangKryo385Cflags}",
 		"kryo585":        "${config.ArmClangKryo585Cflags}",
 		"exynos-m1":      "${config.ArmClangCortexA53Cflags}",
 		"exynos-m2":      "${config.ArmClangCortexA53Cflags}",
